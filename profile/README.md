@@ -1,6 +1,7 @@
-# CommonFIRE
-
-### Free Intelligence, Research and Evolution
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/commonfire-org/.github/main/assets/banners/commonfire-banner-dark.png">
+  <img src="https://raw.githubusercontent.com/commonfire-org/.github/main/assets/banners/commonfire-banner-light.png" alt="CommonFIRE — Free Intelligence, Research and Evolution" width="100%">
+</picture>
 
 Our mission is to help open-source AI flourish: advancing powerful, freely available models, affordable compute, and efficient tools that run on everyday hardware. We champion the freedom to research, build, and use AI so its benefits remain accessible to everyone, beyond the control of any single company or government.
 
