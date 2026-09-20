@@ -4,14 +4,15 @@
 
 `commonfire-logo-source.png` is the original 1254 × 1254 transparent image, preserved unchanged as a reference.
 
-## Canonical brand backgrounds
+## Canonical brand colors
 
-`brand-colors.env` is the source of truth for CommonFIRE's background colors. The builder reads it directly; future brand surfaces should reuse these tokens.
+`brand-colors.env` is the source of truth for CommonFIRE's background and wordmark accent colors. The builder reads it directly; future brand surfaces should reuse these tokens.
 
 | Token | Name | sRGB hex | Role |
 | --- | --- | --- | --- |
 | `COMMONFIRE_BG_LIGHT` | Hearth Linen | `#F2E8D9` | Warm, softly lit neutral for light avatars and surfaces |
 | `COMMONFIRE_BG_DARK` | Blue Ash | `#242B33` | Cool blue-charcoal for dark avatars and surfaces |
+| `COMMONFIRE_ACCENT_FIRE` | Flame Orange | `#FE7009` | SVG-derived accent for the FIRE wordmark; not a body-text color |
 
 Hearth Linen complements the flame without stark white; Blue Ash gives the warm reds and golds a cool counterpoint without pure black. These are the default branded backdrops, not replacements for the logo's original flame colors. Use graphite monochrome on light and silver monochrome on dark. Solid black/white logo exports remain available for single-ink use.
 
@@ -25,7 +26,7 @@ PNG avatars preserve exact background values; JPEG compression may shift them sl
 | `webp/commonfire-logo-{size}.webp` | Lossless transparent web versions at the same sizes |
 | `avatars/commonfire-avatar-light.png` | 1024 px Hearth Linen organization avatar |
 | `avatars/commonfire-avatar-dark.png` | 1024 px Blue Ash avatar |
-| `banners/commonfire-banner-{light,dark}.{png,webp}` | 1600 × 480 horizontal logo and wordmark on canonical backgrounds |
+| `banners/commonfire-banner-{light,dark}.{png,webp}` | 1800 × 600 concept-inspired banner with a large flame, two-tone CommonFIRE wordmark, and expanded-name subtitle |
 | `avatars/preview.png` | Side-by-side light/dark avatar preview |
 | `avatars/*.jpg` | Opaque JPEG alternatives for services that require JPEG |
 | `monochrome/commonfire-logo-black.png` | 1024 px transparent black silhouette for light backgrounds |
@@ -34,6 +35,8 @@ PNG avatars preserve exact background values; JPEG compression may shift them sl
 | `monochrome/commonfire-logo-silver.{png,webp}` | 1024 px lighter shaded grayscale for dark backgrounds; preserves internal ribbon shading |
 | `favicon/favicon.ico` | Multi-resolution icon: 16, 32, 48, and 64 px |
 | `favicon/apple-touch-icon.png` | 180 px Hearth Linen touch icon |
+
+Banners follow the supplied concept's 3:1 composition: a large flame at left, neutral “Common” and orange “FIRE,” with the expanded name beneath. They use clean vector-derived artwork and reproducible typography rather than the concept image's baked-in texture. Light and dark variants retain the canonical backgrounds.
 
 Avatars and the touch icon include extra padding. Transparent exports retain the original canvas. Use PNG or WebP for transparent backgrounds; JPEG cannot retain transparency.
 

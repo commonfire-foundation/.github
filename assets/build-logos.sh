@@ -21,7 +21,7 @@ for size in 2048 1024 512 256 128 64 48 32 16; do
 done
 
 # Native-size renders for composed exports.
-for size in 800 144 360; do
+for size in 800 144 420; do
   rsvg-convert --width "$size" --height "$size" "$source_logo" \
     --output "$build_dir/logo-${size}.png"
 done
@@ -70,13 +70,20 @@ for variant in light dark; do
   else
     background="$COMMONFIRE_BG_DARK"; foreground="$COMMONFIRE_BG_LIGHT"
   fi
-  magick -size 1600x480 "xc:$background" \
-    \( "$build_dir/logo-360.png" \) -geometry +60+60 -composite \
-    -fill "$foreground" -font "$font_bold" -pointsize 112 \
-    -annotate +470+250 'CommonFIRE' \
-    -font "$font_regular" -pointsize 30 \
-    -annotate +476+316 'Free Intelligence, Research and Evolution' \
-    -strip "banners/commonfire-banner-${variant}.png"
+  # Shared font metrics keep the two wordmark segments on one baseline.
+  # Trim only after joining, then scale proportionally to the concept's width.
+  magick -background none -font "$font_bold" -pointsize 180 \
+    \( -fill "$foreground" label:Common \) \
+    \( -fill "$COMMONFIRE_ACCENT_FIRE" label:FIRE \) \
+    +append -trim +repage -resize 1060x160 "$build_dir/wordmark.png"
+  magick -background none -fill "$foreground" -font "$font_regular" -pointsize 60 \
+    label:'Free Intelligence, Research and Evolution' \
+    -trim +repage -resize 1030x50 "$build_dir/tagline.png"
+  magick -size 1800x600 "xc:$background" \
+    \( "$build_dir/logo-420.png" \) -geometry +95+80 -composite \
+    \( "$build_dir/wordmark.png" \) -geometry +520+225 -composite \
+    \( "$build_dir/tagline.png" \) -geometry +527+377 -composite \
+    -depth 8 -strip "banners/commonfire-banner-${variant}.png"
   magick "banners/commonfire-banner-${variant}.png" -define webp:lossless=true \
     "banners/commonfire-banner-${variant}.webp"
 done
