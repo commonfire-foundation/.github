@@ -1,6 +1,6 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/commonfire-org/.github/0826cc762369a2d841ab85b2ccf37491f45c9a97/assets/banners/commonfire-banner-dark.png">
-  <img src="https://raw.githubusercontent.com/commonfire-org/.github/0826cc762369a2d841ab85b2ccf37491f45c9a97/assets/banners/commonfire-banner-light.png" alt="CommonFIRE — Free Intelligence, Research and Evolution" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/commonfire-foundation/.github/0826cc762369a2d841ab85b2ccf37491f45c9a97/assets/banners/commonfire-banner-dark.png">
+  <img src="https://raw.githubusercontent.com/commonfire-foundation/.github/0826cc762369a2d841ab85b2ccf37491f45c9a97/assets/banners/commonfire-banner-light.png" alt="CommonFIRE — Free Intelligence, Research and Evolution" width="100%">
 </picture>
 
 ## Capable AI. Shared knowledge. More people able to build.
