@@ -6,7 +6,7 @@
 
 `assets/` is the canonical home for the logo source, background color tokens, avatars, shaded and solid monochromes, icons, and light/dark horizontal banners. See `assets/README.md` for formats and usage.
 
-To regenerate exports with ImageMagick 7 and DejaVu Sans installed:
+To regenerate exports from the SVG master with librsvg (`rsvg-convert`), ImageMagick 7, and DejaVu Sans installed:
 
 ```sh
 bash assets/build-logos.sh
