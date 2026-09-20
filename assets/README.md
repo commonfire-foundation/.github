@@ -47,6 +47,6 @@ The script replaces generated exports, never the source image. No upscaling is p
 
 ## Artwork limitations
 
-These are raster derivatives, not a vector master. The original includes stray pixels and rough edges, which these exports preserve. Monochrome variants inherit the same alpha silhouette. A clean SVG would require tracing or redrawing and visual approval, not simply wrapping the PNG in an SVG file. The detailed mark may need a simplified design for best legibility at 16–32 px.
+The builder generates raster derivatives from the original PNG, which includes stray pixels and rough edges. Monochrome variants inherit the same alpha silhouette. An additional `commonfire-logo-source.svg` is preserved alongside the PNG; it is not used by the builder and has not been visually validated against the original. The detailed mark may need a simplified design for best legibility at 16–32 px.
 
 This public `.github` repository is the canonical home for CommonFIRE brand assets. The organization profile uses the light/dark banners from `banners/`. Generating assets does not publish changes by itself or change the GitHub organization avatar; avatar uploads are managed separately in organization settings.
