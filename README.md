@@ -1,0 +1,2 @@
+# .github
+CommonFIRE organization profile
